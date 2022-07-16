@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "job-offer.Postulations.Handlers": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "MYSQL_UNMSM_BANKING_CORE_DDD": "Data Source=bir9xcow3uogkdxuvfij-mysql.services.clever-cloud.com;Port=3306;Database=bir9xcow3uogkdxuvfij;User Id=u2bwnlvx3mzkplzm;Password=8tYeE2pAENViJnXhKxp7;charset=utf8;AllowUserVariables=True;",
+        "RABBITMQ_UNMSM_BANKING_CORE_DDD": "amqps://lustadmz:Yz2UOKAsQenf1906reFEpEE04nx3RNoH@jackal.rmq.cloudamqp.com/lustadmz"
+      }
+    }
+  }
+}

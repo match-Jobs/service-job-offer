@@ -1,0 +1,31 @@
+﻿{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:60544",
+      "sslPort": 44341
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "job-offer": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "MYSQL_UNMSM_BANKING_CORE_DDD": "Data Source=bir9xcow3uogkdxuvfij-mysql.services.clever-cloud.com;Port=3306;Database=bir9xcow3uogkdxuvfij;User Id=u2bwnlvx3mzkplzm;Password=8tYeE2pAENViJnXhKxp7;charset=utf8;AllowUserVariables=True;",
+        "RABBITMQ_UNMSM_BANKING_CORE_DDD": "amqps://lustadmz:Yz2UOKAsQenf1906reFEpEE04nx3RNoH@jackal.rmq.cloudamqp.com/lustadmz",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
+
