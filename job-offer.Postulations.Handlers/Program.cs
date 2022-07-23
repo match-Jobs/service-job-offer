@@ -14,6 +14,9 @@ using job_offer.Common.Infra.NSB;
 using job_offer.Postulations.Command.Infra.Persistence.NHibernate.Mappings;
 using job_offer.Common.Infra.Persistence.NHibernate;
 using System.Threading.Tasks;
+using job_offer.JobOffers.Messages.Commands;
+using System.Threading;
+using Microsoft.Azure.WebJobs;
 
 namespace job_offer.Postulations.Handlers
 {
@@ -23,10 +26,15 @@ namespace job_offer.Postulations.Handlers
         {
             Console.Title = "job-offer.Postulations";
             var host = CreateHostBuilder(args).Build();
-            await host.StartAsync();
-            Console.WriteLine("Press any key to shutdown");
-            Console.ReadKey();
-            await host.StopAsync();
+            //await host.StartAsync();
+            //Console.WriteLine("Press any key to shutdown");
+            //Console.ReadKey();
+            //await host.StopAsync();
+            var cancellationToken = new WebJobsShutdownWatcher().Token;
+            using (host)
+            {
+                await host.RunAsync(cancellationToken).ConfigureAwait(false);
+            }
         }
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
@@ -58,6 +66,8 @@ namespace job_offer.Postulations.Handlers
             AddFluentMappings(nHibernateConfig, stringConnection);
             persistence.UseConfiguration(nHibernateConfig);
             persistence.DisableSchemaUpdate();
+            var routing = transport.Routing();
+            routing.RouteToEndpoint(typeof(WithVacancies).Assembly, "job-offer.JobOffers");
             return endpointConfiguration;
         }
 

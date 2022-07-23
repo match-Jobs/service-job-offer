@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>job_offer.JobOffers.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Infra\Persistence\Migrations\MySQL\CreateInitialSchema.sql" />
+    <None Remove="Infra\Persistence\Migrations\MySQL\InsertEmployers.sql" />
+    <None Remove="Infra\Persistence\Migrations\MySQL\InsertOfferers.sql" />
+    <None Remove="Infra\Persistence\Migrations\MySQL\InsertOffersJob.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_WebToolingArtifacts Remove="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Infra\Persistence\Migrations\MySQL\CreateInitialSchema.sql" />
+    <EmbeddedResource Include="Infra\Persistence\Migrations\MySQL\InsertEmployers.sql" />
+    <EmbeddedResource Include="Infra\Persistence\Migrations\MySQL\InsertOfferers.sql" />
+    <EmbeddedResource Include="Infra\Persistence\Migrations\MySQL\InsertOffersJob.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Properties\launchSettings.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentMigrator" Version="3.2.6" />
+    <PackageReference Include="FluentMigrator.Runner" Version="3.2.6" />
+    <PackageReference Include="FluentMigrator.Runner.Mysql" Version="3.2.6" />
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+    <PackageReference Include="job-offer.JobOffers.Message" Version="1.0.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.29" />
+    <PackageReference Include="NHibernate" Version="5.2.7" />
+    <PackageReference Include="NServiceBus" Version="7.2.4" />
+    <PackageReference Include="NServiceBus.Extensions.Hosting" Version="1.0.1" />
+    <PackageReference Include="NServiceBus.MicrosoftLogging.Hosting" Version="1.3.1" />
+    <PackageReference Include="NServiceBus.NHibernate" Version="8.3.0" />
+    <PackageReference Include="NServiceBus.RabbitMQ" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\job-offer.JobOffers\job-offer.JobOffers.csproj" />
+  </ItemGroup>
+
+</Project>

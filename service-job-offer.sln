@@ -3,13 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "job-offer.API", "job-offer.API\job-offer.API.csproj", "{9EEBC703-460A-4773-A580-8C5F847E4495}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "job-offer.API", "job-offer.API\job-offer.API.csproj", "{9EEBC703-460A-4773-A580-8C5F847E4495}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "job-offer", "job-offer\job-offer.csproj", "{81D1DB0E-F639-47A4-87A1-404F3544F886}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "job-offer", "job-offer\job-offer.csproj", "{81D1DB0E-F639-47A4-87A1-404F3544F886}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "job-offer.Postulations.Message", "job-offer.Postulations.Message\job-offer.Postulations.Message.csproj", "{0CB92D1D-93E3-4D4C-B803-AE2C5CA5B463}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "job-offer.Postulations.Message", "job-offer.Postulations.Message\job-offer.Postulations.Message.csproj", "{0CB92D1D-93E3-4D4C-B803-AE2C5CA5B463}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "job-offer.Postulations.Handlers", "job-offer.Postulations.Handlers\job-offer.Postulations.Handlers.csproj", "{2B13C1D2-B307-41B8-8B5E-AD4395169EE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "job-offer.Postulations.Handlers", "job-offer.Postulations.Handlers\job-offer.Postulations.Handlers.csproj", "{2B13C1D2-B307-41B8-8B5E-AD4395169EE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "job-offer.JobOffers.Message", "job-offer.JobOffers.Message\job-offer.JobOffers.Message.csproj", "{4D6C825C-DBD9-43E3-B30E-DC9A7AF7848C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "job-offer.JobOffers.Handlers", "job-offer.JobOffers.Handlers\job-offer.JobOffers.Handlers.csproj", "{BD2E22DB-4AC1-4630-BD19-330246EE663B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "job-offer.JobOffers.API", "job-offer.JobOffers.API\job-offer.JobOffers.API.csproj", "{C654EF66-CE9E-4400-8807-6AF4FD901938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "job-offer.JobOffers", "job-offer.JobOffers\job-offer.JobOffers.csproj", "{0E439EA4-464D-4A63-9865-5D4035E53FE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{2B13C1D2-B307-41B8-8B5E-AD4395169EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B13C1D2-B307-41B8-8B5E-AD4395169EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B13C1D2-B307-41B8-8B5E-AD4395169EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D6C825C-DBD9-43E3-B30E-DC9A7AF7848C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6C825C-DBD9-43E3-B30E-DC9A7AF7848C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6C825C-DBD9-43E3-B30E-DC9A7AF7848C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6C825C-DBD9-43E3-B30E-DC9A7AF7848C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2E22DB-4AC1-4630-BD19-330246EE663B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2E22DB-4AC1-4630-BD19-330246EE663B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2E22DB-4AC1-4630-BD19-330246EE663B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2E22DB-4AC1-4630-BD19-330246EE663B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C654EF66-CE9E-4400-8807-6AF4FD901938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C654EF66-CE9E-4400-8807-6AF4FD901938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C654EF66-CE9E-4400-8807-6AF4FD901938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C654EF66-CE9E-4400-8807-6AF4FD901938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E439EA4-464D-4A63-9865-5D4035E53FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E439EA4-464D-4A63-9865-5D4035E53FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E439EA4-464D-4A63-9865-5D4035E53FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E439EA4-464D-4A63-9865-5D4035E53FE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

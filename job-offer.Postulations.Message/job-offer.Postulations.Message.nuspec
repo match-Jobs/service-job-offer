@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>job-offer.Postulations.Message</id>
+    <version>1.0.0</version>
+    <title>MatchJobs</title>
+    <authors>TeamUNMSM</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/match-Jobs/service-job-offer/</projectUrl>
+    <description>Postulations Messages</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>copyright 2021</copyright>
+    <tags>C# Net Core </tags>
+  </metadata>
+</package>

@@ -1,11 +1,13 @@
 ﻿using job_offer.Postulations.Messages.Commands;
 using job_offer.Postulations.Messages.Events;
 using job_offer.Postulations.Messages.Sagas;
+using job_offer.JobOffers.Messages.Commands;
 using Microsoft.Extensions.Logging;
 using NServiceBus;
 using NServiceBus.Logging;
 using System;
 using System.Threading.Tasks;
+using job_offer.JobOffers.Messages.Events;
 
 namespace job_offer.Postulations.Handlers.Sagas
 {
@@ -35,7 +37,7 @@ namespace job_offer.Postulations.Handlers.Sagas
                     Data.JobOfferId,
                     Data.OffererId
                 );
-                await context.SendLocal(withdraw).ConfigureAwait(false);
+                await context.Send(withdraw).ConfigureAwait(false);
             } 
             catch (Exception ex)
             {
