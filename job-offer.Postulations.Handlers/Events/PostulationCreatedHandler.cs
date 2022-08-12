@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace job_offer.Postulations.Handlers.Events
 {
-    public class PostulationSentHandler : IHandleMessages<PostulationPending>
+    public class PostulationCreatedHandler : IHandleMessages<PostulationCreated>
     {
-        static readonly ILog log = LogManager.GetLogger<PostulationSentHandler>();
+        static readonly ILog log = LogManager.GetLogger<PostulationCreatedHandler>();
 
-        public Task Handle(PostulationPending postulationPending, IMessageHandlerContext context)
+        public Task Handle(PostulationCreated postulationCreated, IMessageHandlerContext context)
         {
             try
             {
-                log.Info($"PostulationSentHandler, PostulationId = {postulationPending.PostulationId}");
+                log.Info($"PostulationCreatedHandler, PostulationId = {postulationCreated.PostulationId}");
             }
             catch (Exception ex)
             {

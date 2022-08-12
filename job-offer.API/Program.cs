@@ -62,7 +62,7 @@ namespace job_offer.API
                     transport.ConnectionString(rabbitmqUrl);
                     transport.UseConventionalRoutingTopology();
                     var routing = transport.Routing();
-                    routing.RouteToEndpoint(typeof(CreatePostulation).Assembly, "job-offer.Postulations");
+                    routing.RouteToEndpoint(typeof(StartPostulation).Assembly, "job-offer.Postulations");
                     endpointConfiguration.SendOnly();
                     return endpointConfiguration;
                 })

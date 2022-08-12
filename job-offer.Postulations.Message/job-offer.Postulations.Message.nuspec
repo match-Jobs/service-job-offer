@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>job-offer.Postulations.Message</id>
-    <version>1.0.0</version>
+    <version>1.2.0</version>
     <title>MatchJobs</title>
     <authors>TeamUNMSM</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

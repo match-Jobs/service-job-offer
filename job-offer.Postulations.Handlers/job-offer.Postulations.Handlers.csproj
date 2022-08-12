@@ -7,7 +7,7 @@
   <ItemGroup>
     <PackageReference Include="FluentNHibernate" Version="2.1.2" />
     <PackageReference Include="job-offer.JobOffers.Message" Version="1.0.0" />
-    <PackageReference Include="job-offer.Postulations.Message" Version="1.0.0" />
+    <PackageReference Include="job-offer.Postulations.Message" Version="1.2.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.33" />
     <PackageReference Include="MySql.Data" Version="8.0.29" />
     <PackageReference Include="NServiceBus" Version="7.2.4" />

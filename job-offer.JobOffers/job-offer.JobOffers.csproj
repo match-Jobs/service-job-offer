@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluentNHibernate" Version="2.1.2" />
-    <PackageReference Include="job-offer.JobOffers.Message" Version="1.0.0" />
+    <PackageReference Include="job-offer.JobOffers.Message" Version="1.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="NServiceBus.NHibernate" Version="8.3.0" />
   </ItemGroup>

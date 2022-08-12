@@ -40,9 +40,7 @@ namespace job_offer.JobOffers.Handlers.Commands
                     nHibernateSession.Save(jobOffer);
                     var withVacanciesOk = new WithVacanciesOk
                     (
-                        withVacancies.PostulationId,
-                        withVacancies.JobOfferId,
-                        withVacancies.OffererId
+                        withVacancies.PostulationId
 
 
                     );

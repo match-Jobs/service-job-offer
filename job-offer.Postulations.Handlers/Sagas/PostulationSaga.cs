@@ -13,7 +13,7 @@ namespace job_offer.Postulations.Handlers.Sagas
 {
     public class PostulationSaga :
         Saga<PostulationSagaData>,
-        IAmStartedByMessages<PostulationCreated>,
+        IAmStartedByMessages<PostulationStarted>,
         IHandleMessages<WithVacanciesOk>,
         IHandleMessages<WithVacanciesRejected>,
         IHandleMessages<JobOfferNotFound>
@@ -24,11 +24,11 @@ namespace job_offer.Postulations.Handlers.Sagas
         public PostulationSaga(ILogger<PostulationSaga> logger)
             => _logger = logger;
 
-        public async Task Handle(PostulationCreated postulationCreated, IMessageHandlerContext context)
+        public async Task Handle(PostulationStarted postulationCreated, IMessageHandlerContext context)
         {
             try 
             {
-                _logger.LogInformation($"Saga PostulationCreated, PostulationId = {postulationCreated.PostulationId}");
+                _logger.LogInformation($"Saga PostulationStarted, PostulationId = {postulationCreated.PostulationId}");
                 Data.PostulationId = postulationCreated.PostulationId;
                 Data.JobOfferId = postulationCreated.JobOfferId;
                 Data.OffererId = postulationCreated.OffererId;
@@ -50,10 +50,10 @@ namespace job_offer.Postulations.Handlers.Sagas
             try
             {
                 log.Info($"Saga WithVacanciesOk, PostulationId = {withVacanciesOk.PostulationId}");
-                var sendPostulation = new SendPostulation(
+                var createPostulation = new CreatePostulation(
                     Data.PostulationId
                 );
-                await context.SendLocal(sendPostulation).ConfigureAwait(false);
+                await context.SendLocal(createPostulation).ConfigureAwait(false);
                 MarkAsComplete();
             }
             catch (Exception ex)
@@ -98,7 +98,7 @@ namespace job_offer.Postulations.Handlers.Sagas
 
         protected override void ConfigureHowToFindSaga(SagaPropertyMapper<PostulationSagaData> mapper)
         {
-            mapper.ConfigureMapping<PostulationCreated>(message => message.PostulationId)
+            mapper.ConfigureMapping<PostulationStarted>(message => message.PostulationId)
                 .ToSaga(sagaData => sagaData.PostulationId);
 
             mapper.ConfigureMapping<WithVacanciesOk>(message => message.PostulationId)

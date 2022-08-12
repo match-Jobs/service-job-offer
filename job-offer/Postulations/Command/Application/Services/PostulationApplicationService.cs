@@ -26,7 +26,7 @@ namespace job_offer.Postulations.Command.Application.Services
             try
             {
                 var postulationId = Guid.NewGuid().ToString();
-                var performPostulation = new CreatePostulation(
+                var performPostulation = new StartPostulation(
                     postulationId,
                     performPostulationRequestDto.CodOfferer,
                     performPostulationRequestDto.CodOffer
